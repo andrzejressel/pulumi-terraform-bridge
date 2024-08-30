@@ -1537,6 +1537,7 @@ func TestHclConversionsToString(t *testing.T) {
 		"yaml":       "# Good enough YAML example",
 		"csharp":     "var fooFactory = barProvider.Baz();",
 		"pcl":        "# Good enough PCL example",
+		"protobuf":   "base64",
 		"haskell":    "", // i.e., a language we could not convert, which should not appear in the output
 	}
 
@@ -1559,6 +1560,9 @@ FooFactory fooFactory = new FooFactory();
 {{ .CodeFences }}
 {{ .CodeFences }}pcl
 # Good enough PCL example
+{{ .CodeFences }}
+{{ .CodeFences }}protobuf
+base64
 {{ .CodeFences }}
 {{ .CodeFences }}yaml
 # Good enough YAML example
